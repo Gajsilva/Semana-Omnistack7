@@ -24,7 +24,7 @@ class Feed extends Component {
     }
                                                                         
     registerToSocket = () => {
-        const socket = io("http://localhost:3033");
+        const socket = io("http://localhost:4444");
         
         socket.on('post', newPost => {
             this.setState({ feed: [newPost, ...this.state.feed] });
@@ -71,7 +71,7 @@ class Feed extends Component {
                         <img src={more} alt= "Mais" />
                     </header>
 
-                    <img src={`http://localhost:3033/files/${post.image}`} alt="" />
+                    <img src={`http://localhost:4444/files/${post.image}`} alt="" />
 
                 
 
