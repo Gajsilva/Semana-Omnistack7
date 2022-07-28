@@ -35,5 +35,21 @@ module.exports = {
         req.io.emit('post', post);
 
         return res.json(post);
+    },
+
+    update (req, res ) {
+        const {id} = req.params;
+        const {author, place, description, hashtags, image } = req.body;
+
+        const upPost = {
+            id, author, place, description, hashtags, image 
+        }
+
+        const post = Post.findStore(post => post.id == id);
+         
+    },
+
+    async delete() {
+
     }
 };

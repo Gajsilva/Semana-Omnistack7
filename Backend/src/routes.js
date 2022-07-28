@@ -14,5 +14,9 @@ routes.get('/posts', PostController.index);
 
 routes.post('/posts/:id/like', LikeController.store)
 
+routes.put('/posts/:id', )
+
+routes.delete('/posts/:id', )
+
 
 module.exports = routes;
